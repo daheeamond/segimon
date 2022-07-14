@@ -127,7 +127,7 @@ class _TaskTileState extends State<TaskTile> {
         alignment: Alignment.center,
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
-          color: item.finished ? Colors.grey : evenItemColor,
+          color: item.finished ? Colors.grey : evenItemColor,//완료하면 상자 색 변경
           borderRadius: BorderRadius.circular(12),
         ),
         duration: const Duration(milliseconds: 300),
@@ -147,7 +147,7 @@ class _TaskTileState extends State<TaskTile> {
               child: Text(
                 item.title,
                 style: TextStyle(
-                  fontFamily: "Galmuri11",
+                  fontFamily: "Galmuri11",//글꼴적용
                   fontSize: 20,
                   color: Colors.white,
                   decoration: item.finished
