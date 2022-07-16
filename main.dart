@@ -5,7 +5,7 @@ final List<Task> _items = [];//task를 만든다-캐시에 저장되있으니까
 
 void main() => runApp(const MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget { //stateless->화면 로드 시 한번만 그려짐
   const MyApp({Key? key}) : super(key: key);
 
   static const String _title = 'Flutter Code Sample'; //const 변수가 클래스 수준에 있는 경우, static const 로 표시
