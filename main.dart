@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todo_hive/task.dart';
+import 'package:intl/intl.dart';
 
 final List<Task> _items = [];//task를 만든다-캐시에 저장되있으니까 앱을 끄면 없어짐-DB를 사용해야함
 
@@ -51,11 +52,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
   @override
   Widget build(BuildContext context) {
+
+    DateTime now = DateTime.now();
+    String formattedDate = DateFormat('yy-MM-dd kk:mm').format(now);
+
     return Scaffold(
       appBar: AppBar(backgroundColor: const Color(0xff6A7BA2),
         title: const Text("습관달성 +7일째 ! \u{1f60e}",
           style: TextStyle(color: Color(0xffFFDFDE),fontFamily: "Galmuri11",fontSize: 20.0),),
-        leading: const Text('7월 4일 (수)', style: TextStyle(color: Color(0xffFFDFDE),fontFamily: "Galmuri11",fontSize: 13.0,)),
+        leading: Text(formattedDate, style: const TextStyle(color: Color(0xffFFDFDE),fontFamily: "Galmuri11",fontSize: 11.0,height:1.3 )),
       ),
 
       floatingActionButton: FloatingActionButton.extended(
